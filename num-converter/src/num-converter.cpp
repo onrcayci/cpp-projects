@@ -2,8 +2,7 @@
 #include <string>
 #include <vector>
 
-// TODO: Add support for bases larger than 10 in v0.0.2
-// TODO: Refactor code to modularize the app in v0.0.2
+// TODO: Add support for negative numbers in v0.0.3
 
 int main(int argc, char **argv) {
 
@@ -28,16 +27,19 @@ int main(int argc, char **argv) {
         int baseto = std::stoi(arguments[1], nullptr, 10);
         int number = std::stoi(arguments[2], nullptr, basefrom);
 
+        // initialize the character array that will be used to construct the new number
+        std::string digits = "0123456789abcedfghijklmnopqrstuvwxyz";
+
         // convert the number to the given base
         std::string result;
         while(number >= baseto) {
             int remainder = number % baseto;
             number /= baseto;
-            result = std::to_string(remainder) + result;
+            result = digits[remainder] + result;
         }
 
         // add the last remainder to the result string
-        result = std::to_string(number) + result;
+        result = digits[number] + result;
 
         // print out the result
         std::cout << result << std::endl;
