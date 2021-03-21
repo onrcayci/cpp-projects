@@ -1,2 +1,5 @@
 # compiled binaries
 bin/
+
+# MacOS
+.DS_Store
