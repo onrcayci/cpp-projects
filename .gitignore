@@ -3,3 +3,6 @@ bin/
 
 # MacOS
 .DS_Store
+
+# build files
+build/
