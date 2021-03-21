@@ -4,7 +4,7 @@
 
 // TODO: Add support for negative numbers in v0.0.3
 
-int main(int argc, char **argv) {
+int main (int argc, char **argv) {
 
     // check if the required arguments provided
     // 4 = command + base from + base to + number
@@ -32,7 +32,7 @@ int main(int argc, char **argv) {
 
         // convert the number to the given base
         std::string result;
-        while(number >= baseto) {
+        while (number >= baseto) {
             int remainder = number % baseto;
             number /= baseto;
             result = digits[remainder] + result;
