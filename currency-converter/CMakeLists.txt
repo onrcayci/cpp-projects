@@ -17,9 +17,7 @@ file(GLOB SRC src/*.cpp)
 add_executable(${EXEC} ${SRC})
 
 # add private libraries
-target_link_libraries(${EXEC} PRIVATE curl)
-target_link_libraries(${EXEC} PRIVATE curlpp)
-target_link_libraries(${EXEC} PRIVATE json)
+target_link_libraries(${EXEC} PRIVATE curl curlpp jsoncpp)
 
 # update install paths
 install(TARGETS ${EXEC} DESTINATION bin)
