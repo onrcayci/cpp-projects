@@ -83,7 +83,6 @@ int main (int argc, char **argv) {
 
         std::cout << "Latest exchange rate: " << exchangeRate << std::endl;
         std::cout << number << " " << currencyFrom << " = " << result << " " << currencyTo << std::endl;
-
         return EXIT_SUCCESS;
     } catch (curlpp::LogicError & e) { 
         std::cerr << e.what() << std::endl;
