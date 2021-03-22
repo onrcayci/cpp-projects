@@ -7,8 +7,8 @@ project(currency-converter)
 # executable name
 set(EXEC convertcur)
 
-# set the C++ 17 standard
-set(CMAKE_CXX_STANDARD 17)
+# set the C++ 20 standard
+set(CMAKE_CXX_STANDARD 20)
 
 # put all .cpp files under src to the project
 file(GLOB SRC src/*.cpp)

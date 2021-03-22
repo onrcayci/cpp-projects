@@ -39,8 +39,6 @@ int main (int argc, char **argv) {
         std::string currencyTo = arguments[1];
         float number = std::stof(arguments[2]);
 
-        std::cout << number << std::endl;
-
         // setup curlpp to get the latest exchange rates
         curlpp::Cleanup requestCleanup;
         curlpp::Easy request;
@@ -80,12 +78,11 @@ int main (int argc, char **argv) {
         // get the exchange rate of the currency that the number will be converted to
         float exchangeRate = json["rates"][currencyTo].asFloat();
 
-        std::cout << exchangeRate << std::endl;
-
         // make the conversion
         float result = number * exchangeRate;
 
-        std::cout << result << std::endl;
+        std::cout << "Latest exchange rate: " << exchangeRate << std::endl;
+        std::cout << number << " " << currencyFrom << " = " << result << " " << currencyTo << std::endl;
 
         return EXIT_SUCCESS;
     } catch (curlpp::LogicError & e) { 
