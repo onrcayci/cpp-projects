@@ -3,13 +3,19 @@
 
 #include "dice.h"
 
+#include <vector>
+
 class Game 
 {
     private:
-        Dice * dice;
+        std::vector<Dice> dice;
+        std::vector<int> rollResult;
     public:
         Game();
-        Game(Dice *);
+        Game(std::vector<Dice>);
+        std::vector<int> getRollResult();
+        void rollDice();
+        void chooseAndRollDice(int index...);
 };
 
 #endif

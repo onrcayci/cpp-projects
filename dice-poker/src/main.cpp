@@ -2,20 +2,29 @@
 * Dice Poker main (game) method
 * TODO:
 * - Game Class
-* -- constructor
-* -- play round
 * -- choose die
 * - Rules
 */
 
-#include "dice.h"
+#include "game.h"
 
 #include <iostream>
 
 int main(void)
 {
-    Dice die;
-    int value = die.roll();
-    std::cout << value << std::endl;
+    Game game;
+    game.rollDice();
+    std::vector<int> firstRound = game.getRollResult();
+    for (int result : firstRound)
+    {
+        std::cout << result << std::endl;
+    }
+    std::cout << std::endl;
+    game.chooseAndRollDice(0, 1, 2, 3, 4);
+    std::vector<int> secondRound = game.getRollResult();
+    for (int result : secondRound)
+    {
+        std::cout << result << std::endl;
+    }
     return 0;
 }
