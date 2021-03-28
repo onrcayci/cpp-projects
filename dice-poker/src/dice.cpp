@@ -2,15 +2,18 @@
 
 #include <random>
 
-Dice::Dice(void) {
+Dice::Dice(void)
+{
     this->maxValue = 6;
 }
 
-Dice::Dice(int value) {
+Dice::Dice(int value)
+{
     this->maxValue = value;
 }
 
-int Dice::roll(void) {
+int Dice::roll(void)
+{
 
     // obtain a seed
     std::random_device rd;

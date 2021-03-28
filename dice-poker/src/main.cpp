@@ -12,7 +12,8 @@
 
 #include <iostream>
 
-int main(void) {
+int main(void)
+{
     Dice die;
     int value = die.roll();
     std::cout << value << std::endl;
