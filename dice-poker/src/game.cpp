@@ -28,7 +28,7 @@ void Game::rollDice(void)
     }
 }
 
-void Game::chooseAndRollDice(int index...)
+void Game::rollDice(int index...)
 {
     va_list indeces;
     va_start(indeces, index);

@@ -15,7 +15,7 @@ class Game
         Game(std::vector<Dice>);
         std::vector<int> getRollResult();
         void rollDice();
-        void chooseAndRollDice(int index...);
+        void rollDice(int index...);
 };
 
 #endif

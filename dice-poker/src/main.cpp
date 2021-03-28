@@ -1,8 +1,11 @@
 /*
 * Dice Poker main (game) method
 * TODO:
-* - Game Class
-* -- choose die
+* - Player
+* -- constructor
+* -- play (round)
+* -- check hand (one pair, two pairs, full house etc.)
+* -- bet
 * - Rules
 */
 
@@ -20,7 +23,7 @@ int main(void)
         std::cout << result << std::endl;
     }
     std::cout << std::endl;
-    game.chooseAndRollDice(0, 1, 2, 3, 4);
+    game.rollDice(0, 1, 2, 3, 4);
     std::vector<int> secondRound = game.getRollResult();
     for (int result : secondRound)
     {
