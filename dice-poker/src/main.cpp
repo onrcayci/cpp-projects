@@ -6,7 +6,8 @@
 * -- play (round)
 * -- check hand (one pair, two pairs, full house etc.)
 * -- bet
-* - Rules
+* - Game
+* -- rules
 */
 
 #include "game.h"
