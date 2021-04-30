@@ -5,8 +5,8 @@ project(DicePoker)
 
 set(EXEC dice_poker)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 17)
 
-file(GLOB SRC src/*.cpp)
+file(GLOB LIB src/*/*.cpp)
 
-add_executable(${EXEC} ${SRC})
+add_executable(${EXEC} ${LIB} "src/main.cpp")

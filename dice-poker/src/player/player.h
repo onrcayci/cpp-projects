@@ -1,7 +1,7 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include "dice.h"
+#include "../dice/dice.h"
 #include <vector>
 
 namespace Player

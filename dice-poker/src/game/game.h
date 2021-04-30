@@ -1,7 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include "dice.h"
+#include "../dice/dice.h"
 
 #include <vector>
 
